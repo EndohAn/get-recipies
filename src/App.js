@@ -2,7 +2,6 @@
 import {useEffect, useState} from"react";
 import './App.css';
 import MyRecipesComponent from "./MyRecipesComponent";
-import image from './img.jpg';
 import video from './food.mp4';
 
 
@@ -12,7 +11,7 @@ function App(){
   const My_KEY = "29c30b95fab850060525f868bb388667";
   const [searchInput,setSearchInput] = useState('');
   const [getRecipes,setGetRecipes] = useState([]);
-  const[wordSubmitted,setWordSubmitted] =useState('avocado');
+  const[wordSubmitted,setWordSubmitted] =useState('egg');
 
   useEffect(()=>{
     const getApi = async()=>{
@@ -48,10 +47,9 @@ function App(){
       <form onSubmit={finalSearch}>
         <input onChange={myRecipeSearch} value={searchInput} className="search" placeholder="Search recipes ...."></input>
       </form>
+      <button onClick={ finalSearch } >ENTER</button>
     </div>
-    <div className="container">
-      <button>ENTER</button>
-    </div>
+    
   <div>
      {getRecipes.map((element,index )=>(
       <MyRecipesComponent key={index}

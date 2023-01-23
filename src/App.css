@@ -13,21 +13,12 @@ video{
     z-index: -1;
 }
 
-
-   .main_img{       
-
-        width: 100vw;
-        min-height: 100%;
-        object-fit: cover;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: -1;
-    }
+   
     h1{
         font-size: 50px;
         color: #fff;
         font-weight: 500;
+        text-shadow: 0 1px 0 black;     
 
         
     }
@@ -38,6 +29,7 @@ video{
         font-weight: 500;
         padding: 15px;
         border: 2px dashed #fff;
+        text-shadow: 0 1px 0 black;     
     }
     .sub_title{
         font-size: 24px;
@@ -77,7 +69,8 @@ video{
         color: #fff;
         font-size: 26px;
         line-height: 50px;
-        font-weight: 200;       
+        font-weight: 200;
+        text-shadow: 0 2px 0 black;       
     
     }
     li{
@@ -91,3 +84,9 @@ video{
         font-weight: 600;
     }
     
+    button{
+        background-color: #fff;
+        border: none;
+        padding: 13px;
+        margin: 2px;       
+    }
