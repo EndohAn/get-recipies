@@ -3,6 +3,7 @@ import {useEffect, useState} from"react";
 import './App.css';
 import MyRecipesComponent from "./MyRecipesComponent";
 import image from './img.jpg';
+import video from './food.mp4';
 
 
 function App(){
@@ -35,8 +36,11 @@ function App(){
   return(
     <div>
         <div className ="container" >
-      <img  className="main_img" src = {image} alt="food"/>  
-      <h1>Find a recipe</h1>  
+      {/* <img  className="main_img" src = {image} alt="food"/>   */}
+      <video autoPlay muted loop>
+        <source src={video} type='video/mp4'/>
+      </video>
+      <h1>Find  a  recipe</h1>  
     </div>
 
     <div className="container">
@@ -44,6 +48,9 @@ function App(){
       <form onSubmit={finalSearch}>
         <input onChange={myRecipeSearch} value={searchInput} className="search" placeholder="Search recipes ...."></input>
       </form>
+    </div>
+    <div className="container">
+      <button>ENTER</button>
     </div>
   <div>
      {getRecipes.map((element,index )=>(
